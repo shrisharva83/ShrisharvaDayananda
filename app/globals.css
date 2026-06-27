@@ -1,40 +1,40 @@
 @import 'tailwindcss';
 
 /* ==========================================================================
-   Senthur Ayyappan — Personal Almanac
-   Vintage Tamil cinema × Japanese editorial.
-   Paper + ink palette, one serif voice everywhere, kolam ornaments.
+   Warm Linen (light) + Warm Charcoal (dark)
+   Soothing amber editorial — morning sunlight meets candlelit reading room.
+   Parchment base, amber glow, grounded warmth.
    ========================================================================== */
 
 :root {
-  /* Crisp Surf + Deep Ocean Ink */
-  --paper: #d4e3f2;       /* Bright, clean slate-white */
-  --paper-2: #f1f5f9;     /* Slightly darker for frames/borders */
-  --paper-3: #e2e8f0;
-  --ink: #0f172a;         /* Very dark navy/slate instead of brown-black */
-  --ink-soft: #334155;
-  --ink-mute: #64748b;
+  /* Light mode: Warm linen + amber — morning sunlight on parchment */
+  --paper: #faf7f2;       /* Warm linen white */
+  --paper-2: #f2ede4;     /* Aged parchment */
+  --paper-3: #e8e0d0;     /* Warm beige surface */
+  --ink: #1e1a14;         /* Deep warm brown-black */
+  --ink-soft: #3d3526;    /* Rich charcoal-brown */
+  --ink-mute: #7a6e5a;    /* Warm muted brown */
 
-  /* Accent Palette */
-  --indigo: #1d4ed8;
-  --red-oxide: #0ea5e9;   /* Swapping the old red accent for a vibrant wave blue */
-  --mustard: #eab308;     /* Keeping a sandy yellow accent */
-  --yellow: #fde047;
-  --olive: #84cc16;
-  --teal: #14b8a6;
-  --cream: #f0f9ff;
+  /* Warm amber accent palette */
+  --indigo: #b56a00;      /* Deep burnt amber */
+  --red-oxide: #c47800;   /* Warm amber — primary accent */
+  --mustard: #d4890a;     /* Golden amber */
+  --yellow: #e8a020;      /* Bright amber */
+  --olive: #7a6e5a;       /* Warm olive-brown */
+  --teal: #8b5e2a;        /* Sienna */
+  --cream: #fdf9f3;       /* Warm cream for stamps/insets */
 
-  --rule: rgba(15, 23, 42, 0.15);
-  --rule-strong: rgba(15, 23, 42, 0.45);
-  
-  /* Keep the backwards-compatible aliases matching your new colors */
-  --sa-black: #0f172a;
-  --sa-white: #f8fafc;
-  --sa-off-white: #e2e8f0;
-  --sa-yellow: #eab308;
-  --sa-red: #0ea5e9;
-  --sa-blue: #1d4ed8;
-  --sa-green: #84cc16;
+  --rule: rgba(30, 26, 20, 0.12);
+  --rule-strong: rgba(30, 26, 20, 0.30);
+
+  /* Backwards-compatible aliases */
+  --sa-black: #1e1a14;
+  --sa-white: #faf7f2;
+  --sa-off-white: #e8e0d0;
+  --sa-yellow: #d4890a;
+  --sa-red: #c47800;
+  --sa-blue: #b56a00;
+  --sa-green: #7a6e5a;
 
   /* ... keep the rest of the --sh syntax highlighting variables as they are */
 
@@ -61,29 +61,26 @@
 }
 
 .dark {
-  /* Deep Ocean / Sleek Tech Palette */
-  --paper: #020617;       /* Very deep slate/navy background */
-  --paper-2: #0f172a;     /* Slightly lighter for frames and image borders */
-  --paper-3: #1e293b;
-  --ink: #f8fafc;         /* Crisp white for primary text */
-  --ink-soft: #cbd5e1;    /* Soft silver for secondary text */
-  --ink-mute: #94a3b8;    /* Muted blue-grey for meta text */
-  
-  --rule: rgba(248, 250, 252, 0.15);
-  --rule-strong: rgba(248, 250, 252, 0.45);
-  --cream: #0f172a;
+  /* Dark mode: warm charcoal — dimly lit reading room */
+  --paper: #1c1a17;       /* Warm charcoal */
+  --paper-2: #252219;     /* Slightly lighter warm dark */
+  --paper-3: #2e2a20;     /* Surface layer */
+  --ink: #f0ead6;         /* Candlelight parchment */
+  --ink-soft: #c8bfa8;    /* Muted parchment */
+  --ink-mute: #8a806c;    /* Warm grey-brown */
 
-  /* Aliases to keep layout components working */
-  --sa-black: #020617;
-  --sa-white: #f8fafc;
-  --sa-off-white: #1e293b;
+  --rule: rgba(240, 234, 214, 0.10);
+  --rule-strong: rgba(240, 234, 214, 0.25);
+  --cream: #2e2a20;
+
+  --sa-black: #1c1a17;
+  --sa-white: #f0ead6;
+  --sa-off-white: #2e2a20;
 
   --background: var(--paper);
   --text: var(--ink);
   --muted: var(--ink-mute);
-  
-  /* We'll use the vibrant blue we set in light mode as the dark mode accent */
-  --accent: var(--red-oxide); 
+  --accent: var(--red-oxide);
 }
 
 * {
@@ -92,37 +89,30 @@
 
 html {
   min-width: 320px;
-  background-color: var(--background);
+  background-color: var(--background) !important;
 }
 
 body {
   margin: 0;
   padding: 0;
-  background: var(--paper);
+  background-color: var(--paper) !important;
+  background-image:
+    radial-gradient(ellipse at 10% 0%, rgba(196, 120, 0, 0.07), transparent 45%),
+    radial-gradient(ellipse at 90% 100%, rgba(180, 106, 0, 0.05), transparent 45%);
   color: var(--ink);
-  font-family: var(--font-geist-sans), Helvetica, sans-serif;  font-size: 19px;
+  font-family: var(--font-geist-sans), Helvetica, sans-serif;
+  font-size: 19px;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   transition: background-color 0.35s ease, color 0.35s ease;
-
-  body {
-  /* ... other properties ... */
-  background-image: radial-gradient( ... ), url("data:image/svg+xml;utf8,...");
-}
 }
 
 .dark body {
-  background-image: radial-gradient(
-      circle at 20% 10%,
-      rgba(244, 236, 220, 0.025),
-      transparent 40%
-    ),
-    radial-gradient(
-      circle at 80% 60%,
-      rgba(244, 236, 220, 0.02),
-      transparent 50%
-    ),
+  background-color: var(--paper) !important;
+  background-image:
+    radial-gradient(ellipse at 20% 0%, rgba(212, 134, 10, 0.12), transparent 50%),
+    radial-gradient(ellipse at 80% 100%, rgba(196, 122, 30, 0.08), transparent 50%);
 }
 
 a {
@@ -2015,7 +2005,7 @@ img {
   color: var(--accent);
 }
 .sidebar {
-  background-color: var(--background);
+  background-color: var(--background) !important;
 }
 .title {
   text-wrap: balance;
@@ -2441,7 +2431,7 @@ table {
   overflow: visible;
 }
 .panel {
-  background-color: var(--background);
+  background-color: var(--background) !important;
   border: solid 1px var(--sa-black);
   box-shadow: 0 6px 6px -6px rgba(0, 0, 0, 0.5);
   min-height: 200px;

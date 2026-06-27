@@ -92,21 +92,36 @@ function Lede() {
           src="/about/profile.png"
           alt="Shrisharva at IISc"
           fill
-          sizes="(min-width: 960px) 50vw, 100vw"
-          style={{ objectFit: 'cover', objectPosition: 'center 20%' }}
+          sizes="(min-width: 840px) 50vw, 50vw"
+          style={{ objectFit: 'cover'}}
           priority
         />
       </div>
       <p>
-        I am a Pre Doc Research Intern at the BEES Lab, IISc, advised by Prof. Hardik J. Pandya. My research focuses heavily on medical technology and advanced electronic systems, ranging from multidirectional high-frequency TTF and EIT systems for glioblastoma localization to the fabrication of biocompatible piezoelectric energy harvesters. My foundation is rooted deeply in semiconductor fabrication, FPGA architecture, and hardware codesign.
+        I am currently a Pre-Doctoral Research Intern at the BEES Lab at the Indian 
+        Institute of Science (IISc), working with Prof. Hardik J. Pandya. My research 
+        focuses heavily on advanced medical electronics: from developing 
+        multidirectional high-frequency TTF and Electrical Impedance Tomography (EIT) 
+        systems for tissue-level glioblastoma localization. 
       </p>
       <p>
-        Whether I am working on RF MEMS planarization, developing deep-learning accelerators in Verilog, or designing 400V motor controllers for Formula Student vehicles, I bridge the gap between simulation and physical hardware. Beyond the lab, I stay highly active through half marathons, field hockey, archery, and tug of war. I am also an avid coastal photographer and traveler, exploring the shorelines of Southern India, having recently surpassed half a million photo views on Google Maps.
+        My work moves between hardware codesign, FPGA architecture, and 
+        embedded firmware. As an intern at Pragati Automation, I implemented FPGA-based 
+        digital twins for power converter monitoring and developed End-of-Line testing PCBs. 
+        I have also contributed to the diagnostic ecosystem through research 
+        internships at IIT Guwahati and IIT Kharagpur, where I developed deep-learning 
+        accelerators for EEG classification and ultrasound hardware. I earned 
+        my BTech in Electrical and Electronics Engineering, during which I served as the 
+        Electronics and Firmware Lead for NITKRacing. There, I led the development of 
+        vehicle control units, safety systems, and a high-performance motor 
+        controller for our Formula Student vehicle.
+      </p>
+      <p>
+        Beyond the lab, I stay highly active through trekking, cycling, marathons, field hockey, handball, and tug of war.
       </p>
     </section>
   )
 }
-
 function Experience() {
   return (
     <section className="section" id="experience">

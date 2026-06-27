@@ -88,16 +88,16 @@ function SocialRow() {
   return (
     <div className="sidenav-social" aria-label="Elsewhere">
       {/* TODO: Update these href links with your own URLs */}
-      <a href="https://github.com/senthurayyappan" target="_blank" rel="noopener noreferrer" aria-label="GitHub" title="GitHub">
+      <a href="https://github.com/shrisharva83" target="_blank" rel="noopener noreferrer" aria-label="GitHub" title="GitHub">
         <GitHubIcon />
       </a>
-      <a href="https://www.linkedin.com/in/imsenthur/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn">
+      <a href="https://www.linkedin.com/in/Shrisharva-D" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn">
         <LinkedInIcon />
       </a>
-      <a href="mailto:senthur@umich.edu" aria-label="Email" title="Email">
+      <a href="mailto:shrisharvad.221ee250@nitk.edu.in" aria-label="Email" title="Email">
         <MailIcon />
       </a>
-      <a href="/rss" aria-label="RSS" title="RSS">
+      <a href="" aria-label="RSS" title="Altium 365 viewer">
         <RssIcon />
       </a>
       <ThemeSwitch />
